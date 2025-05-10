@@ -1,0 +1,157 @@
+.heroBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f4f6f8;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.heroContent {
+  max-width: 400px;
+}
+
+.heroTitle {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.heroDiscount {
+  color: #ff4252;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.shopBtn {
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 2.1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1.2rem;
+  transition: background 0.2s;
+}
+.shopBtn:hover {
+  background: #444;
+}
+
+.heroImage {
+  width: 260px;
+  min-width: 180px;
+}
+
+.productsSection {
+  margin-top: 2rem;
+}
+
+.productsTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .heroBanner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+  .productsGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+  }
+  .heroImage {
+    width: 160px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroBanner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .heroImage {
+    order: -1; /* l'image passe en premier */
+    margin-bottom: 1rem;
+    width: 180px;
+  }
+}
+
+/* Home.module.css */
+
+.latestDropsSection {
+  padding: 1.5rem; /* Adjust overall padding of the section */
+}
+
+.latestDropsTitle {
+  font-size: 1.5rem; /* Slightly smaller title */
+  font-weight: 600; /* Semi-bold title */
+  margin-bottom: 1rem; /* Adjust spacing below the title */
+  color: #222; /* Darker text color for the title */
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Responsive grid columns */
+  gap: 1rem; /* Spacing between product cards */
+}
+
+.productCard {
+  background-color: #fff; /* White background for the cards */
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle card shadow */
+}
+
+.productImageContainer {
+  aspect-ratio: 1 / 1; /* Maintain square aspect ratio for images */
+  background-color: #f7f7f7; /* Light background for image area */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem; /* Add some padding around the image */
+}
+
+.productImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Ensure the whole image is visible within the container */
+}
+
+.productInfo {
+  padding: 0.75rem;
+}
+
+.productBrand {
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.productName {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.productPrice {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #222;
+}
