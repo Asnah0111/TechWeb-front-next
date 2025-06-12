@@ -1,0 +1,41 @@
+.toast {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  animation: fadeIn 0.3s ease;
+  font-size: 1rem;
+  min-width: 220px;
+  border-left: 5px solid #28c76f;
+}
+.icon {
+  font-size: 1.4em;
+}
+.close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.3em;
+  margin-left: 0.5em;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.close:hover {
+  color: #ffb4b4;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

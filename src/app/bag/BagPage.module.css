@@ -1,0 +1,279 @@
+.pageBg {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  background: #fff;
+  max-width: 1080px;
+  margin: 40px auto 0 auto;
+  border-radius: 1.25rem;
+  padding: 0 0 40px 0;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: row;
+  gap: 56px;
+  box-sizing: border-box;
+}
+
+.leftSection {
+  flex: 2;
+  padding: 48px 0 0 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bagTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #232323;
+  margin-bottom: 34px;
+}
+
+.bagList {
+  width: 100%;
+}
+
+.bagRow {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 0;
+}
+
+.bagImg {
+  width: 130px;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 16px;
+  background: #f4f8f6;
+  display: block;
+}
+
+.bagDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prodTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.prodBrand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #232323;
+  display: block;
+}
+
+.prodName {
+  font-size: 0.95rem;
+  color: #181313;
+  margin-top: 2px;
+}
+
+.prodPrice {
+  font-size: 1.03rem;
+  font-weight: 600;
+  color: #232323;
+}
+
+.prodControls {
+  display: flex;
+  flex-direction: row;
+  gap: 26px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.qtyControls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  background: #fafbfa;
+  border-radius: 8px;
+  padding: 5px 16px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+.divide {
+  margin-top: 50px;
+  border: solid 0.1px rgba(134, 130, 130, 0.527);
+}
+.qtyBtn {
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  font-size: 1.13rem;
+  cursor: pointer;
+  font-weight: 700;
+  color: #444;
+  transition: border 0.15s;
+  padding: 0;
+}
+.qtyBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.qtyBtn:hover:enabled {
+  border: 1px solid #222;
+}
+
+.qtyNumber {
+  min-width: 1.4rem;
+  text-align: center;
+  display: inline-block;
+}
+
+.removeBtn {
+  border: none;
+  background: none;
+  color: #828282;
+  font-size: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+  transition: color 0.18s;
+  font-weight: 500;
+}
+.removeBtn:hover {
+  color: #ec5e2a;
+}
+
+.divider {
+  border: none;
+  border-bottom: 1px solid #eaeaea;
+  margin: 0 0 28px 0;
+}
+
+.summarySection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 48px 48px 0 0;
+}
+
+.summaryCard {
+  background: #fafbfa;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  width: 350px;
+  padding: 32px 32px 34px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: stretch;
+}
+
+.summaryTitle {
+  font-size: 1.42rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.summaryRows {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.summaryRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.08rem;
+  color: #222;
+  font-weight: 500;
+}
+
+.discount {
+  color: #ec5e2a;
+  font-weight: 600;
+}
+
+.summaryTotalRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 26px 0 18px 0;
+  font-size: 1.18rem;
+  font-weight: 700;
+}
+
+.totalAmount {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.checkoutBtn {
+  width: 100%;
+  background: #201b21;
+  border: none;
+  border-radius: 0.7rem;
+  color: #fff;
+  font-size: 1.13rem;
+  font-weight: 700;
+  padding: 1.07rem 0;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.49rem;
+  box-shadow: 0 1px 4px 0 #0001;
+}
+.checkoutBtn:hover {
+  background: #444;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .main {
+    max-width: 98vw;
+    padding: 0 0 10px 0;
+    gap: 18px;
+  }
+  .leftSection,
+  .summarySection {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .summaryCard {
+    width: 100%;
+    min-width: 240px;
+    max-width: 340px;
+  }
+}
+@media (max-width: 800px) {
+  .main {
+    flex-direction: column;
+    gap: 22px;
+    padding: 0 0 10px 0;
+  }
+  .summarySection {
+    align-items: stretch;
+    padding: 20px 8px 0 8px;
+  }
+  .summaryCard {
+    margin: 0 auto;
+  }
+  .leftSection {
+    padding: 18px 8px 0 8px;
+  }
+}

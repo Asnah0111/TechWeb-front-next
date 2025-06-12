@@ -1,21 +1,50 @@
-import React from "react";
-import { Product } from "../types/product";
+/*import React from "react";
+import styles from "../app/Home.module.css";
 
-export default function ProductCard({ product }: { product: Product }) {
+export default function ProductCard({ product }: { product: any }) {
   return (
-    <div className="bg-white rounded-lg shadow p-4 flex flex-col items-center">
-      <img
-        src={"/img/" + product.brand + ".png"}
-        alt={product.name}
-        className="object-cover rounded"
-        style={{ width: "200px", height: "200px" }}
-      />
-      <div className="mt-2 text-center">
-        <h3 className="font-semibold">{product.brand}</h3>
-        <p className="text-gray-700 text-sm">{product.name}</p>
-        <p className="text-gray-700 text-sm">{product.description}</p>
-        <p className="text-black font-bold">${product.price}</p>
+    <div className={styles.productCard}>
+      <div className={styles.productImageContainer}>
+        <img
+          src={"/img/" + product.brand + ".png"}
+          alt={product.name}
+          className={styles.productImage}
+        />
+      </div>
+      <div className={styles.productInfo}>
+        <p className={styles.productBrand}>{product.brand}</p>
+        <p className={styles.productName}>{product.name}</p>
+        <p className={styles.productDescription}>{product.description}</p>
+        <p className={styles.productPrice}>${product.price}</p>
       </div>
     </div>
+  );
+}*/
+
+import Link from "next/link";
+import styles from "../app/Home.module.css";
+
+export default function ProductCard({ product }: { product: any }) {
+  return (
+    <Link
+      href={{
+        pathname: `/product/${product.id}`,
+      }}
+      className={styles.productCard}
+    >
+      <div className={styles.productImageContainer}>
+        <img
+          src={"/img/" + product.brand + ".png"}
+          alt={product.name}
+          className={styles.productImage}
+        />
+      </div>
+      <div className={styles.productInfo}>
+        <p className={styles.productBrand}>{product.brand}</p>
+        <p className={styles.productName}>{product.name}</p>
+        <p className={styles.productDescription}>{product.description}</p>
+        <p className={styles.productPrice}>${product.price}</p>
+      </div>
+    </Link>
   );
 }
