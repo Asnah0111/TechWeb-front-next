@@ -5,7 +5,7 @@ Il s’agit de la partie visible du site, qui dialogue avec une API backend pour
 
 ---
 
-## 🚀 Installation rapide
+## Installation rapide
 
 1. **Cloner le dépôt**
    ```bash
@@ -28,7 +28,7 @@ Il s’agit de la partie visible du site, qui dialogue avec une API backend pour
 
 ---
 
-## 🛠️ Détails de développement
+## Détails de développement
 
 - **Structure du projet**
   - Les pages principales sont dans `/app` (Next.js App Router).
